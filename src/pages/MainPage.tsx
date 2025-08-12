@@ -4,7 +4,7 @@ const MainPage: React.FC = () => {
         <>
             <div className="main-image">
                 <img src="/src/assets/67a88cae6e72edc64d90dfacbbc96a25a9f7c7ff.png" alt="Main Banner" />
-                <p>Biggest <p>discounts <img src="/src/assets/Vector 1.png" alt="" /></p> this season</p>
+                <div><p>Biggest<span className="animated-font"> discounts <img src="/src/assets/Vector 1.png" alt="" /></span> this season</p></div>
                 <nav>
                     <a href="/sales">View sale</a>
                 </nav>
