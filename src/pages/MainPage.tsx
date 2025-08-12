@@ -3,7 +3,7 @@ const MainPage: React.FC = () => {
     return (
         <>
             <div className="main-image">
-                <img src="/src/assets/67a88cae6e72edc64d90dfacbbc96a25a9f7c7ff.png" alt="Main Banner" />
+                <img src="/src/assets/7bc7f2091a75ab627779b90ac75b030ad4e08925.png" alt="Main Banner" width={'1440px'} height={'623px'} style={{ top: '-72px' }}/>
                 <div><p>Biggest<span className="animated-font"> discounts <img src="/src/assets/Vector 1.png" alt="" /></span> this season</p></div>
                 <nav>
                     <a href="/sales">View sale</a>
@@ -15,13 +15,13 @@ const MainPage: React.FC = () => {
                
                 <div className="image-container">
 
-                    <img src="/src/assets/67a88cae6e72edc64d90dfacbbc96a25a9f7c7ff.png" alt="" />
+                    <img src="/src/assets/67a88cae6e72edc64d90dfacbbc96a25a9f7c7ff.png" alt="" width={'343px'} height={'227.81px'} />
                
-                    <img src="/src/assets/67a88cae6e72edc64d90dfacbbc96a25a9f7c7ff.png" alt="" />
+                    <img src="/src/assets/67a88cae6e72edc64d90dfacbbc96a25a9f7c7ff.png" alt="" width={'343px'} height={'227.81px'}/>
                
-                    <img src="/src/assets/67a88cae6e72edc64d90dfacbbc96a25a9f7c7ff.png" alt="" />
+                    <img src="/src/assets/67a88cae6e72edc64d90dfacbbc96a25a9f7c7ff.png" alt="" width={'343px'} height={'227.81px'}/>
 
-                    <img src="/src/assets/6b3fb5e8f7fe3e2d05845e88db3a6a4b0c5d2324.png" alt="" />
+                    <img src="/src/assets/6b3fb5e8f7fe3e2d05845e88db3a6a4b0c5d2324.png" alt="" width={'343px'} height={'227.81px'}/>
                     
                     <nav>
                         <a href="/AI-search">AI powered search <img src="/src/assets/fluent_search-sparkle-24-filled.svg" alt="" /></a>
