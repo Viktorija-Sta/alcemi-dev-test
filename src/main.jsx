@@ -4,7 +4,7 @@ import './index.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import MainPage from './pages/MainPage.js'
 import MainLayout from './layouts/MainLayout.js'
-import MainAIWindow from './components/AI-assistant/Main-window/MainAIWindow.js'
+import MainAIWindow from './components/AI-assistant/AIWindow/AIWindow.js'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
