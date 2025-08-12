@@ -1,5 +1,10 @@
+import { useState } from "react"
+import AIWindow from "../AI-assistant/AIWindow/AIWindow"
+
 const BestSellerSection: React.FC = () => {
+    const [isAiVisible, setIsAIVisible] = useState(false)
     return (
+        <>
          <div className="bottom-images">
                 <h2>BEST SELLERS</h2>
                
@@ -14,11 +19,20 @@ const BestSellerSection: React.FC = () => {
                     <img src="/src/assets/6b3fb5e8f7fe3e2d05845e88db3a6a4b0c5d2324.png" alt="" width={'343px'} height={'227.81px'}/>
                     
                     <nav>
-                        <a href="/AI-search">AI powered search <img src="/src/assets/fluent_search-sparkle-24-filled.svg" alt="" /></a>
+                        <button className="ai-search-button" onClick={() => setIsAIVisible(true)}>
+                           
+                        AI powered search <img src="/src/assets/fluent_search-sparkle-24-filled.svg" alt="" />
+                        </button>
                     </nav>
                 </div>
-
             </div>
+
+            {isAiVisible && (
+                <div className="modal-overlay">
+                    <AIWindow onClose={() => setIsAIVisible(false)} />
+                </div>
+            )}
+        </>
     )
 }
 

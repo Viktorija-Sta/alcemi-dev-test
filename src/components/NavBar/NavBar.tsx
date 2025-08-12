@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom"
+
 const Navbar: React.FC = () => {
     return (
         <nav>
             <p>eshop logo</p>
             <ul>
-                <li><a href="/products">PRODUCTS</a></li>
-                <li><a href="/about">ABOUT</a></li>
-                <li><a href="/FQA">FQA</a></li>
+                <li><Link to="/products">PRODUCTS</Link></li>
+                <li><Link to="/about">ABOUT</Link></li>
+                <li><Link to="/FQA">FQA</Link></li>
             </ul>
         </nav>
     )
