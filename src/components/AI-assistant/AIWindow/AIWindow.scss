@@ -1,0 +1,82 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    backdrop-filter: blur(6px);
+}
+
+.main-ai-window {
+    background: linear-gradient(180deg, #001c53, #007aff);
+    border-radius: 16px;
+    padding: 24px;
+    max-width: 800px;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+
+        button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+    }
+    .title {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .ai-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        button {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 8px;
+            padding: 8px 16px;
+            cursor: pointer;
+            color: #fff;
+        }
+    }
+
+    .ai-input {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #fff;
+        border-radius: 8px;
+        padding: 6px 12px;
+
+        input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .logo {
+        align-self: flex-start;
+        img {
+            height: 24px;
+        }
+    }
+}
+
