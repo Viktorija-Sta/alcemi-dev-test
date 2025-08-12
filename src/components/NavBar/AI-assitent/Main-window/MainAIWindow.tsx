@@ -15,10 +15,18 @@ const MainAIWindow: React.FC = () => {
                 <button>Consultation</button>
                 <button>Dresses for summer</button>
                 
-                <div className="ai-content">
-                    
+                <div className="ai-assistant">
+                    <input type="text" placeholder="Ask anything..." />
+                    <img src="/src/assets/ai-assistant-icon.png" alt="AI Assistant"
+                    />
                 </div>
+            </div>
+
+            <div className="logo">
+                <img src="/src/assets/Powered by.png" alt="" />
             </div>
         </>
     )
 }
+
+export default MainAIWindow
