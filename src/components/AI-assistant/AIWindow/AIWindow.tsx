@@ -1,4 +1,3 @@
-import ActionButtons from "../Buttons/ActionButtons"
 
 interface AIWindowProps {
     onClose: () => void;
@@ -28,15 +27,15 @@ const AIWindow: React.FC<AIWindowProps> = ({ onClose }) => {
                 </div>
                 
                 <div className="ai-input">
-                    <input type="text" placeholder="Ask anything..." />
-                    <img src="/src/assets/ai-assistant-icon.png" alt="AI Assistant"
+                    <textarea placeholder="Ask anything..."></textarea>
+                    <img src="/src/assets/mdi_microphone.png" alt="AI Assistant"
                     />
+                </div>
+                <div className="logo">
+                    <img src="/src/assets/Powered by.png" alt="" />
                 </div>
             </div>
 
-            <div className="logo">
-                <img src="/src/assets/Powered by.png" alt="" />
-            </div>
         </>
     )
 }

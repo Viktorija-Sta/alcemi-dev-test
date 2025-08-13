@@ -1,7 +1,7 @@
 const HeroSection: React.FC = () => {
     return (
          <div className="main-image">
-                <img src="/src/assets/7bc7f2091a75ab627779b90ac75b030ad4e08925.png" alt="Main Banner" width={'1440px'} height={'623px'} style={{ top: '-72px' }}/>
+                <img src="/src/assets/7bc7f2091a75ab627779b90ac75b030ad4e08925.png" alt="Main Banner"/>
                 <div>
                     <p>
                         Biggest
