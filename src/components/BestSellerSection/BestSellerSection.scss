@@ -1,19 +1,45 @@
 .bottom-images {
     h2 {
-
+        font-weight: normal;
     }
 
     .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 15px;
 
         img {
+            width: 300px;
+            height: 227.81px;
 
         }
     }
 
     nav {
+        display: flex;
+        justify-content: center;
+        padding: 10px 16px;
+        gap: 8px;
+        
+        
+
 
         .ai-search-button {
-            
+            position: fixed;      
+            bottom: 20px;         
+            left: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 173px;
+            gap: 8px;
+            background: #1632CD;
+            color: #FEFEFE ;
+            border-radius: 30px;
+            padding: 5px  10px;
+            z-index: 1000;
+
         }
     }
 }
