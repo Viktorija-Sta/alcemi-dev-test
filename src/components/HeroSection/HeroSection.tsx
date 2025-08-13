@@ -2,7 +2,7 @@ const HeroSection: React.FC = () => {
     return (
          <div className="main-image">
                 <img src="/src/assets/7bc7f2091a75ab627779b90ac75b030ad4e08925.png" alt="Main Banner"/>
-                <div>
+                <div className="image-title">
                     <p>
                         Biggest
                         <span className="animated-font"> discounts <img src="/src/assets/Vector 1.png" alt="" /></span>
