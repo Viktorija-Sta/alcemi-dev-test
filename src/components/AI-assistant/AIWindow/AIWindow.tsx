@@ -15,15 +15,17 @@ const AIWindow: React.FC<AIWindowProps> = ({ onClose }) => {
                     </button>
                 </div>
 
-                <h1>Hello, what are you looking for today?</h1>
-                
                  <div className="ai-options">
-                    <button>Product</button>
-                    <button>Information</button>
-                    <button>Support</button>
-                    <button>Brand assets</button>
-                    <button>Consultation</button>
-                    <button>Dresses for summer</button>
+                    <h1>Hello, what are you looking for today?</h1>
+                
+                    <div className="buttons">
+                        <button>Product</button>
+                        <button>Information</button>
+                        <button>Support</button>
+                        <button>Brand assets</button>
+                        <button>Consultation</button>
+                        <button>Dresses for summer</button>
+                    </div>
                 </div>
                 
                 <div className="ai-input">
