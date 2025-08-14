@@ -5,7 +5,7 @@ const HeroSection: React.FC = () => {
                 <div className="image-title">
                     <p>
                         Biggest
-                        <span className="animated-font"> discounts <img src="/src/assets/Vector 1.png" alt="" /></span>
+                        <span className="animated-font"> discounts <img className="underline" src="/src/assets/Vector 1.png" alt="" /></span>
                          this season
                     </p>
                 </div>

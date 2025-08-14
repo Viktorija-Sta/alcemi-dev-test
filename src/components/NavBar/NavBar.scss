@@ -1,33 +1,104 @@
-nav {
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     width: 100%;
-    
-    p {
 
+    .logo {
+        
     }
-    ul {
+
+    .menu {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 40px;
         list-style: none;
         padding: 0;
-        gap: 40px;
-        li {
+        margin: 0;
 
-            a {
-                text-decoration: none;
-                color: #000;
-                font-weight: 500;
-                padding: 10px 15px;
-                transition: background-color 0.3s;
+        li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
 
-                &:hover {
-                    background-color: #f0f0f0;
-                }
+            &:hover {
+                background-color: #f0f0f0;
             }
         }
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+
+        span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #000;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .menu {
+            display: none;
+        }
+        .hamburger {
+            display: flex;
+        }
+    }
+}
+
+/* Overlay efektas */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+/* Šoninis meniu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+
+    a {
+        margin-bottom: 15px;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+    }
+
+    .close-btn {
+        background: none;
+        border: none;
+        font-size: 28px;
+        align-self: flex-end;
+        cursor: pointer;
+    }
+
+    &.open {
+        right: 0;
     }
 }

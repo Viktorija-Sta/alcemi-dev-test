@@ -2,38 +2,45 @@
     box-sizing: border-box;
 }
 
-
 .modal-overlay {
     position: fixed;
     inset: 0;
     background: rgba(0,0,0, 0.4);
     display: flex;
     justify-content: center;
-    align-items: center;
     z-index: 50;
-   
-    
+    overflow: auto;
 }
 
 .main-ai-window {
-    background: #02092E;
-    background: linear-gradient(180deg, #02092E 22%, #091e8b 54%, #FCFCFC);
-    border-radius: 20px;
-    padding: 24px;
-    border: #fff solid 1px;
-    max-width: 1300px;
-    max-height: 780px;
+    max-width: 90%;
+    max-height: 90%;
     width: 100%;
-    color: #fff;
+    min-height: 400px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
-    
+    background: linear-gradient(180deg, #02092E 22%, #091e8b 54%, #FCFCFC);
+    border-radius: 20px;
+    margin: 24px;
+    border: #fff solid 1px;
+    overflow-y: auto;
+    color: #fff;
+    align-items: center;
+    position: relative;
+
+    .top-logo {
+        display: none;
+
+        img {
+            height: 24px;
+        }
+    }
 
     .action-buttons {
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;
         width: 100%;
         gap: 10px;
 
@@ -45,17 +52,29 @@
             height: 24px;
         }
 
+
+        .exit-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
+
     .ai-options {
         width: 45%;
         text-align: center;
         display: flex;
         flex-wrap: wrap;
         gap: 16px;
-        
+        padding: 50px 20px;
+
         .title {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-weight: 400;
+            padding-bottom: 48px;
+            padding-top: 50px;
+            padding-left: 36px;
+            padding-right: 36px;
         }
 
         .buttons {
@@ -64,10 +83,11 @@
             justify-content: center;
             text-align: center;
             padding: 12px;
-            gap: 10px;
+            padding-bottom: 20px;
+            gap: 16px;
 
             button {
-                background:#FFFFFF33 20%;
+                background: #FFFFFF33;
                 border: none;
                 border-radius: 10px;
                 padding: 12px;
@@ -81,7 +101,7 @@
                 }
 
                 &:hover {
-                     box-shadow: 0 0 8px rgba(173, 216, 255, 0.6)
+                    box-shadow: 0 0 8px rgba(173, 216, 255, 0.6);
                 }
             }
         }
@@ -91,45 +111,128 @@
         position: relative;
         background: #fff;
         border-radius: 10px;
+        padding-top: 20px;
         padding: 16px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-items: flex-start;
         width: 480px;
-        min-height: 120px;
+        min-height: 100px;
         max-height: 200px;
 
-
         textarea {
+            flex: 1;
             border: none;
             outline: none;
+            resize: none;
             font-size: 1rem;
-            width: 100%;
+            font-family: inherit;
+            color: #000;
+            background: transparent;
             min-height: 120px;
-            max-height: 200px;
 
+            &::placeholder {
+                color: #999; 
+            }
         }
 
         img {
             position: absolute;
             bottom: 16px;
             right: 16px;
-            width: 16px;
-            height: 16px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
-            background: #0A186A;
-            background: linear-gradient(0deg,rgba(10, 24, 106, 0.99) 10%, rgba(20, 47, 208, 1) 100%);
-            padding: 7px 8px;
+            background: linear-gradient(0deg, rgba(10, 24, 106, 0.99) 10%, rgba(20, 47, 208, 1) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
+            padding: 7px 8px;
         }
     }
 
     .logo {
         align-self: flex-start;
+        padding-left: 24px;
+        padding-bottom: 20px;
+
         img {
             height: 24px;
         }
     }
 }
 
+@media (max-width: 750px) {
+    .main-ai-window {
+        width: 100%;
+        height: 100%;
+        padding: 16px;
+        margin: 0;
+        overflow-y: auto;
+
+        .ai-options {
+            width: 100%;
+            padding: 20px 0;
+            margin: 0;
+        }
+
+        .buttons {
+            width: 100%;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .main-ai-window {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        padding: 16px;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+
+        .top-logo {
+            display: flex;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            z-index: 60;
+            padding-left: 28px;
+        }
+
+        .action-buttons {
+            justify-content: flex-end;
+            gap: 10px;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            z-index: 60;
+
+            .back-button {
+                display: none;
+            }
+
+            .exit-button {
+                display: flex;
+                padding-right: 28px;
+                padding-top: 27px;
+            }
+        }
+
+        .ai-input {
+            width: 100%;
+            max-width: none;
+        }
+        .logo {
+            display: none;
+        }
+    }
+}

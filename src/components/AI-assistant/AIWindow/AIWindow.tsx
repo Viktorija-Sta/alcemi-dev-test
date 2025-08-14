@@ -5,6 +5,7 @@ interface AIWindowProps {
 }
 const AIWindow: React.FC<AIWindowProps> = ({ onClose }) => {
     const [activeOption, setActiveOption] = useState<string | null>(null)
+    
 
     const options = [
         'Product',
@@ -19,16 +20,19 @@ const AIWindow: React.FC<AIWindowProps> = ({ onClose }) => {
         <>
              <div className="main-ai-window">
                 <div className="action-buttons">
-                    <button onClick={onClose}>
-                    <img src="/src/assets/clarity_arrow-line.png" alt="Back" />
+                    <div className="top-logo">
+                        <img src="/src/assets/logo.png" alt="" />
+                    </div>
+                    <button  className='back-button' onClick={onClose}>
+                        <img src="/src/assets/clarity_arrow-line.png" alt="Back" />
                     </button>
-                    <button onClick={onClose}>
-                    <img src="/src/assets/right side.png" alt="Exit" />
+                    <button className="exit-button" onClick={onClose}>
+                        <img src="/src/assets/right side.png" alt="Exit" />
                     </button>
                 </div>
 
                  <div className="ai-options">
-                    <h1>Hello, what are you looking for today?</h1>
+                    <h1 className="title">Hello, what are you looking for today?</h1>
                 
                     <div className="buttons">
                         {options.map ((option) => (
