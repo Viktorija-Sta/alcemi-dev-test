@@ -74,6 +74,15 @@
                 cursor: pointer;
                 color: #fff;
                 gap: 10px;
+                transition: box-shadow 0.2s ease, transform 0.1s ease;
+
+                &.active {
+                    box-shadow: 0 0 12px #FFFFFF;
+                }
+
+                &:hover {
+                     box-shadow: 0 0 8px rgba(173, 216, 255, 0.6)
+                }
             }
         }
     }

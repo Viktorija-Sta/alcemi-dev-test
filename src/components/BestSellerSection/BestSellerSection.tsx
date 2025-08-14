@@ -20,10 +20,14 @@ const BestSellerSection: React.FC = () => {
                     
                 </div>
                 <nav>
-                    <button className="ai-search-button" onClick={() => setIsAIVisible(true)}>
+                    {!isAiVisible && (
+                        <button className="ai-search-button" onClick={() => setIsAIVisible(true)}>
+
+                    
                         
                     AI powered search <img src="/src/assets/fluent_search-sparkle-24-filled.svg" alt="" />
                     </button>
+                    )}
                 </nav>
             </div>
 

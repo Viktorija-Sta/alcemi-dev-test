@@ -1,8 +1,20 @@
+import { useState } from "react";
 
 interface AIWindowProps {
     onClose: () => void;
 }
 const AIWindow: React.FC<AIWindowProps> = ({ onClose }) => {
+    const [activeOption, setActiveOption] = useState<string | null>(null)
+
+    const options = [
+        'Product',
+        'Information',
+        'Support',
+        'Brand assets',
+        'Consultation',
+        'Dresses for summer'
+    ]
+
     return (
         <>
              <div className="main-ai-window">
@@ -19,12 +31,13 @@ const AIWindow: React.FC<AIWindowProps> = ({ onClose }) => {
                     <h1>Hello, what are you looking for today?</h1>
                 
                     <div className="buttons">
-                        <button>Product</button>
-                        <button>Information</button>
-                        <button>Support</button>
-                        <button>Brand assets</button>
-                        <button>Consultation</button>
-                        <button>Dresses for summer</button>
+                        {options.map ((option) => (
+                            <button key={option} 
+                                className= {activeOption === option ? 'active' : ''}
+                                onClick={() => setActiveOption(option)}>
+                                {option}
+                                </button>
+                        ))}
                     </div>
                 </div>
                 
