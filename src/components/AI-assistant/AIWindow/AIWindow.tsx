@@ -29,7 +29,7 @@ const AIWindow: React.FC<AIWindowProps> = ({ onClose }) => {
                 </div>
                 
                 <div className="ai-input">
-                    <textarea placeholder="Ask anything..."></textarea>
+                    <textarea id="ai-assistant" name="ai-assistant" placeholder="Ask anything..."></textarea>
                     <img src="/src/assets/mdi_microphone.png" alt="AI Assistant"
                     />
                 </div>
