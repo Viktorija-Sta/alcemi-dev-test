@@ -26,7 +26,7 @@ const AIWindow: React.FC<AIWindowProps> = ({ onClose }) => {
                     <div className="top-logo">
                         <img src="/src/assets/logo.png" alt="" />
                     </div>
-                    <button  className='back-button' onClick={() => navigate(-1) } >
+                    <button  className='back-button' onClick={onClose} >
                         <img src="/src/assets/clarity_arrow-line.png" alt="Back" />
                     </button>
                     <button className="exit-button" onClick={onClose}>
