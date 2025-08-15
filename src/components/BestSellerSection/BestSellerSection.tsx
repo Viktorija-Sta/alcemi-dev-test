@@ -1,5 +1,5 @@
 import { useState } from "react"
-import AIWindow from "../AI-assistant/AIWindow/AIWindow"
+import AIWindow from "../AI-assistant/AIWindow"
 import { Link } from "react-router-dom"
 
 const BestSellerSection: React.FC = () => {
