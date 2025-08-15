@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface AIWindowProps {
     onClose: () => void;
 }
 const AIWindow: React.FC<AIWindowProps> = ({ onClose }) => {
     const [activeOption, setActiveOption] = useState<string | null>(null)
+
+    const navigate = useNavigate()
     
 
     const options = [
@@ -23,7 +26,7 @@ const AIWindow: React.FC<AIWindowProps> = ({ onClose }) => {
                     <div className="top-logo">
                         <img src="/src/assets/logo.png" alt="" />
                     </div>
-                    <button  className='back-button' onClick={onClose}>
+                    <button  className='back-button' onClick={() => navigate(-1) } >
                         <img src="/src/assets/clarity_arrow-line.png" alt="Back" />
                     </button>
                     <button className="exit-button" onClick={onClose}>

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import AIWindow from "../AI-assistant/AIWindow/AIWindow"
+import { Link } from "react-router-dom"
 
 const BestSellerSection: React.FC = () => {
     const [isAiVisible, setIsAIVisible] = useState(false)
@@ -10,13 +11,13 @@ const BestSellerSection: React.FC = () => {
                
                 <div className="image-container">
 
-                    <img src="/src/assets/67a88cae6e72edc64d90dfacbbc96a25a9f7c7ff.png" alt=""  />
+                    <Link to={'/'}><img src="/src/assets/67a88cae6e72edc64d90dfacbbc96a25a9f7c7ff.png" alt=""  /></Link>
                
-                    <img src="/src/assets/67a88cae6e72edc64d90dfacbbc96a25a9f7c7ff.png" alt="" />
+                    <Link to={'/'}><img src="/src/assets/67a88cae6e72edc64d90dfacbbc96a25a9f7c7ff.png" alt="" /></Link>
                
-                    <img src="/src/assets/67a88cae6e72edc64d90dfacbbc96a25a9f7c7ff.png" alt="" />
+                    <Link to={'/'}><img src="/src/assets/67a88cae6e72edc64d90dfacbbc96a25a9f7c7ff.png" alt="" /></Link>
 
-                    <img src="/src/assets/6b3fb5e8f7fe3e2d05845e88db3a6a4b0c5d2324.png" alt="" />
+                    <Link to={'/'}><img src="/src/assets/6b3fb5e8f7fe3e2d05845e88db3a6a4b0c5d2324.png" alt="" /></Link>
                     
                 </div>
                 <nav>

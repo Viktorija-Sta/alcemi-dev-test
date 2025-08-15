@@ -21,6 +21,8 @@
         margin: 0;
 
         li a {
+            font-family: Anybody, sans-serif;
+            font-weight: 400;
             text-decoration: none;
             color: #000;
             font-weight: 500;
@@ -57,7 +59,6 @@
     }
 }
 
-/* Overlay efektas */
 .overlay {
     position: fixed;
     top: 0;
@@ -68,7 +69,6 @@
     z-index: 999;
 }
 
-/* Šoninis meniu */
 .side-menu {
     position: fixed;
     top: 0;

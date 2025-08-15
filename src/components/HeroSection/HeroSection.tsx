@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const HeroSection: React.FC = () => {
     return (
          <div className="main-image">
@@ -10,7 +12,7 @@ const HeroSection: React.FC = () => {
                     </p>
                 </div>
                 <nav>
-                    <a href="/sales">View sale</a>
+                    <Link to={'/sales'}>View sale</Link>
                 </nav>
             </div>
     )
